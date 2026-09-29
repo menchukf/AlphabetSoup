@@ -29,13 +29,14 @@ public class Soup {
 
     //adds a word to the pool of letters known as "letters"
     public void add(String word){
-
+        letters+=word;
     }
 
 
     //Use Math.random() to get a random character from the letters string and return it.
     public char randomLetter(){
-        return 'a';
+        int randLetterIndex = (int) Math.random() * letters.length();
+        return letters.charAt(randLetterIndex);
     }
 
 
